@@ -47,3 +47,5 @@ _testmain.go
 #*.jpeg
 *.psd
 node_modules
+package-lock.json
+package.json
