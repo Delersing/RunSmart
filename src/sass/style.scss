@@ -1,0 +1,9 @@
+@import "variables";
+@import "mixins";
+@import "general";
+@import "media";
+
+* {
+    font-family: 'MuseoSansCyrl', sans-serif;
+    box-sizing: border-box
+}
