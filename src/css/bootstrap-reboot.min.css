@@ -103,7 +103,8 @@ h6 {
 
 p {
     margin-top: 0;
-    margin-bottom: 1rem
+    margin-bottom: 0;
+    /* был 1 rem */
 }
 
 abbr[data-bs-original-title],

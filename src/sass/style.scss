@@ -1,9 +1,17 @@
 @import "base/variables";
 @import "base/mixins";
-@import "general";
-@import "media";
+@import "base/media";
 
 * {
     font-family: 'Museo Sans Cyrl', sans-serif;
-    box-sizing: border-box
+    box-sizing: border-box;
 }
+
+.container {
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+@import "blocks/promo";
+@import "blocks/header";
+@import "blocks/buttons";
