@@ -1,0 +1,78 @@
+@media (max-width: 563px) {
+    .container {
+        max-width: 308px;
+        margin: 0 auto;
+    }
+
+    .button {
+        width: 123px;
+        min-height: 12px;
+        font-size: 11px;
+    }
+
+    .button.button_main {
+        margin-top: 40px;
+        min-width: 210px;
+        height: 0px;
+        min-height: 40px;
+        font-size: 14px;
+    }
+
+    .header {
+        position: relative;
+
+        &__logo {
+            width: 172px;
+        }
+
+        &__official {
+            position: absolute;
+            right: 0px;
+            top: 200px;
+            font-size: 13px;
+
+            span {
+                font-size: 17px;
+            }
+        }
+
+        &__phone {
+            font-size: 14px;
+        }
+    }
+
+    .promo {
+        min-height: 650px;
+        padding: 21px 0 130px 0;
+        background: url(../img/first-bg.jpg) center (center/cover) no-repeat;
+
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            margin-top: 91px;
+        }
+
+        &__header {
+            font-size: 24px;
+        }
+
+        &__subheader {
+            font-size: 13px;
+        }
+
+        &__icons {
+            margin-top: 102px;
+            width: 310px;
+            justify-content: space-between;
+        }
+
+        &__icon {
+            font-size: 12px;
+        }
+
+        &__link {
+            margin-top: 5px;
+        }
+    }
+}
