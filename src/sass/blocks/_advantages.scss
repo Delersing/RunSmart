@@ -3,6 +3,10 @@
     min-height: 473px;
     background-color: #F6F6F6;
 
+    .container {
+        position: relative;
+    }
+
     &__title {
         color: #0D0D0D;
         text-align: center;
@@ -42,4 +46,5 @@
         font-size: 14px;
         font-weight: 300;
     }
+
 }
