@@ -1,18 +1,29 @@
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 7%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 7%;
+    }
+}
+
 @media (max-width: 563px) {
     .container {
-        max-width: 308px;
-        margin: 0 auto;
+        padding: 0 7%;
     }
 
     .button {
-        width: 123px;
+        width: 145px;
         min-height: 12px;
-        font-size: 11px;
+        font-size: 12px;
     }
 
     .button.button_main {
         margin-top: 40px;
-        min-width: 210px;
+        min-width: 202px;
         height: 0px;
         min-height: 40px;
         font-size: 14px;
@@ -22,7 +33,7 @@
         position: relative;
 
         &__logo {
-            width: 172px;
+            width: 220px;
         }
 
         &__official {
@@ -37,7 +48,7 @@
         }
 
         &__phone {
-            font-size: 14px;
+            font-size: 17px;
         }
     }
 
@@ -68,7 +79,12 @@
         }
 
         &__icon {
-            font-size: 12px;
+            font-size: 13px;
+
+            img {
+                width: 50px;
+                height: 53px;
+            }
         }
 
         &__link {
@@ -77,7 +93,15 @@
     }
 
     .advantages {
-        padding: 55px 0px 62px 0px;
+        padding: 55px 0px 55px 0px;
+
+        &__subtitle {
+            font-size: 19px;
+        }
+
+        &__text {
+            font-size: 15px;
+        }
 
         &__title {
             font-size: 24px;
@@ -95,10 +119,32 @@
             p {
                 margin-top: 11px;
             }
+
+            img {
+                width: 80px;
+                height: 75px;
+            }
         }
 
         &__subtitle {
             margin-top: 15px;
+        }
+    }
+
+    .consultation {
+        padding: 55px 0 55px 0;
+
+        h2 {
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 19px;
+        }
+
+        button {
+            width: 100%;
+            font-size: 18px;
         }
     }
 }
