@@ -10,13 +10,25 @@
     }
 }
 
+@media (max-width: 700px) {
+    .promo {
+        &__header {
+            font-size: 39px;
+        }
+
+        &__subheader {
+            font-size: 23px;
+        }
+    }
+}
+
 @media (max-width: 563px) {
     .container {
         padding: 0 7%;
     }
 
     .button {
-        width: 145px;
+        width: 138px;
         min-height: 12px;
         font-size: 12px;
     }
@@ -33,13 +45,15 @@
         position: relative;
 
         &__logo {
-            width: 220px;
+            img {
+                width: 90%;
+            }
         }
 
         &__official {
             position: absolute;
             right: 0px;
-            top: 200px;
+            top: 230px;
             font-size: 13px;
 
             span {
@@ -48,7 +62,7 @@
         }
 
         &__phone {
-            font-size: 17px;
+            font-size: 16px;
         }
     }
 
