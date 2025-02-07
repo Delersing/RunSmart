@@ -73,20 +73,44 @@
 // logging(-6, -2);
 
 //для работы слайдера
-$(document).ready(function () {
-    $('.carousel__inner').slick({
-        speed: 1200,
-        // adaptiveHeight: true,
-        prevArrow: '<button type="button" class="slick-prev"><img src="../icons/leftArrow.svg"></button>',
-        nextArrow: '<button type="button" class="slick-next"><img src="../icons/rightArrow.svg"></button>',
-        responsive: [
-            {
-                breakpoint: 992,
-                settings: {
-                    dots: true,
-                    arrows: false
-                }
-            }
-        ]
-    });
+// $(document).ready(function () {
+//     $('.carousel__inner').slick({
+//         speed: 1200,
+//         // adaptiveHeight: true,
+//         prevArrow: '<button type="button" class="slick-prev"><img src="icons/leftArrow.svg"></button>',
+//         nextArrow: '<button type="button" class="slick-prev"><img src="icons/leftArrow.svg"></button>',
+//         responsive: [
+//             {
+//                 breakpoint: 992,
+//                 settings: {
+//                     dots: true,
+//                     arrows: false
+//                 }
+//             }
+//         ]
+//     });
+// });
+
+const slider = tns({
+    container: '.carousel__inner',
+    items: 1,
+    slideBy: 'page',
+    autoplay: false,
+    controls: false,
+    nav: false,
+    autoHeight: true,
+    speed: 800
 });
+// снизу более современная запись обработчика onclick() - это addEventListener('click'). И кстати, главное не сделать ошибку в написании самого метода, потому что addeventlisrener не имеет ничего общего с addEventListener, буква т, Вано, буква Т! 
+document.querySelector('.prev').addEventListener('click', function () {
+    slider.goTo('prev');
+});
+document.querySelector('.next').addEventListener('click', function () {
+    slider.goTo('next');
+});
+// document.querySelector('.prev').onclick = function () {
+//     slider.goTo('prev');
+// };
+// document.querySelector('.next').onclick = function () {
+//     slider.goTo('next');
+// };
