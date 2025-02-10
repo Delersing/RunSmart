@@ -29,7 +29,7 @@
         transform: skewX(-25deg);
         margin: 0 5px;
         cursor: pointer;
-        transition: 1.5s all;
+        transition: 1s all;
 
         &:hover {
             box-shadow: 2px 2px 10px #222222ba;
@@ -49,7 +49,14 @@
     }
 
     &__content {
+        display: none;
+        justify-content: space-between;
+        flex-wrap: wrap;
         margin-top: 60px;
+
+        &_active {
+            display: flex;
+        }
     }
 
     &__item {
@@ -57,6 +64,8 @@
         min-height: 440px;
         border: 2px solid #e8e8e8;
         padding: 20px 20px 26px 20px;
+        margin-bottom: 20px;
+        overflow: hidden;
     }
 
     &__img {
@@ -88,7 +97,7 @@
 
     &__link {
         display: block;
-        margin-top: 10px;
+        margin-top: 15px;
         color: $main-color;
         text-align: center;
         font-size: 14px;
@@ -96,6 +105,26 @@
         font-weight: 500;
         line-height: 14px;
         text-decoration-line: underline;
+        text-transform: uppercase;
+
+        &:hover {
+            color: $main-color;
+        }
+    }
+
+    &__back {
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(calc(-50% - 10px));
+        display: block;
+        color: $main-color;
+        text-align: center;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        text-decoration-line: underline;
+        text-transform: uppercase;
 
         &:hover {
             color: $main-color;
@@ -136,5 +165,65 @@
         width: 135.0px;
         height: 44.0px;
         font-size: 14px;
+    }
+
+    &__wrapper {
+        display: flex;
+        width: calc(200% + 40px);
+    }
+
+    &__contents {
+        transition: 0.5s all;
+        width: 50%;
+        margin-right: 0px;
+        transform: translateX(-100%);
+
+        &_active {
+            transform: translateX(0%);
+            margin-right: 20px;
+        }
+    }
+
+    &__list {
+        position: relative;
+        width: 50%;
+        margin-left: 20px;
+        transform: translateX(0%);
+        padding-right: 20px;
+        transition: 0.5s all;
+        padding-left: 19px;
+        margin-bottom: 0px;
+        list-style-type: none;
+
+        li {
+            position: relative;
+            color: #555;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 300;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 5px;
+                height: 5px;
+                background-color: $main-color;
+                left: -14px;
+                top: 7px;
+            }
+
+            &:nth-child(n) {
+                margin-bottom: 7px;
+            }
+
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+
+        &_active {
+            transform: translateX(-100%);
+            margin-left: 0px;
+        }
     }
 }
