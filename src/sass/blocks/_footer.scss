@@ -1,0 +1,57 @@
+.footer {
+    min-height: 630px;
+    position: relative;
+    margin-top: 48px;
+
+    &__info {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 460px;
+        height: 270px;
+        background-color: $main-color;
+        color: #FFF;
+        text-align: center;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        padding: 50px 69px 60px 69px;
+        text-align: center;
+    }
+
+    &__address {
+        margin-bottom: 36px;
+    }
+
+    &__phone {
+        display: block;
+        margin-bottom: 36px;
+        text-decoration: none;
+        color: #FFF;
+
+        &:hover {
+            color: #FFF;
+            text-decoration: underline;
+        }
+    }
+
+    &__social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        a {
+
+            border-radius: 100%;
+            transition: 0.6s all;
+
+            &:hover {
+
+                box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.536);
+            }
+        }
+    }
+}

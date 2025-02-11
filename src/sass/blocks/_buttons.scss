@@ -9,6 +9,12 @@
     font-size: 12px;
     font-weight: 500;
     text-transform: uppercase;
+    transition: 0.6s all;
+
+    &:hover {
+        box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.536);
+        transform: scale(1.03);
+    }
 
     &_main {
         margin-top: 67px;
