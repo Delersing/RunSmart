@@ -55,6 +55,16 @@
             line-height: 25px;
         }
     }
+
+    .error {
+        border: 1px solid $main-color;
+    }
+
+    label.error {
+        border: none;
+        text-align: center;
+        margin-bottom: 15px;
+    }
 }
 
 #consultation,

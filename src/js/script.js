@@ -19,24 +19,7 @@ $(document).ready(function () {
             .addClass('catalog__tab_active').siblings().removeClass('catalog__tab_active')
             .closest('div.container').find('div.catalog__content').removeClass('catalog__content_active').eq($(this).index()).addClass('catalog__content_active');
     });
-    //******
-    // неоптимиизированная версия вызова и скрытия формы
-    // $('.catalog__link').each(function (i) {
-    //     $(this).on('click', function (e) {
-    //         e.preventDefault();
-    //         $('.catalog__contents').eq(i).toggleClass('catalog__contents_active')
-    //         $('.catalog__list').eq(i).toggleClass('catalog__list_active')
-    //     })
-    // })
-    // $('.catalog__back').each(function (i) {
-    //     $(this).on('click', function (e) {
-    //         e.preventDefault();
-    //         $('.catalog__contents').eq(i).toggleClass('catalog__contents_active')
-    //         $('.catalog__list').eq(i).toggleClass('catalog__list_active')
-    //     })
-    // })
-    //******
-    // оптимиизированная версия вызова и скрытия формы
+
     function toogleSlide(item) {
         $(item).each(function (i) {
             $(this).on('click', function (e) {
@@ -63,4 +46,34 @@ $(document).ready(function () {
             $('.overlay, #order').fadeIn('slow');
         });
     });
+
+    function validateForms(form) {
+        $(form).validate({
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 2
+                },
+                phone: "required",
+                email: {
+                    required: true,
+                    email: true
+                }
+            },
+            messages: {
+                name: {
+                    required: "пожалуйста, введите свое имя",
+                    minlength: jQuery.validator.format("Введите {0} символа!")
+                },
+                phone: "Пожалуйста, введите свой номер телефона",
+                email: {
+                    required: "Пожалуйста, введите свою почту",
+                    email: "Неправильно введён адрес почты"
+                }
+            }
+        });
+    };
+    validateForms('#consultation form');
+    validateForms('#consultation-form');
+    validateForms('#order form');
 });
