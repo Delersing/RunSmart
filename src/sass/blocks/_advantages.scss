@@ -49,8 +49,15 @@
 
     &__img {
         &_animated {
-            animation-name: heartbeat;
-            animation-duration: 2s;
+            animation: heartbeat 1.5s ease infinite; //необходимы как минимум два параметра
+            // animation-name: heartbeat; // имя
+            // animation-duration: 1.5s; // время
+            // animation-timing-function: ease;
+            // animation-iteration-count: infinite;
+
+            &:hover {
+                animation-play-state: paused;
+            }
         }
     }
 }
