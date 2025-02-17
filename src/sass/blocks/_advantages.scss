@@ -47,4 +47,10 @@
         font-weight: 300;
     }
 
+    &__img {
+        &_animated {
+            animation-name: heartbeat;
+            animation-duration: 2s;
+        }
+    }
 }
