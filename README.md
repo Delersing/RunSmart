@@ -74,3 +74,21 @@
 // logging(-6, -2);
 
 //для работы слайдера
+
+# другой вид слайдера
+    // .tns-item {
+    //     img {
+    //         display: block;
+    //         margin: 0 auto;
+    //     }
+    // }
+
+    // .tns-nav {
+    //     button {
+    //         background-color: red;
+    //     }
+
+    //     .tns-nav-active {
+    //         background-color: blue;
+    //     }
+    // }
